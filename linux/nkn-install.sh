@@ -23,7 +23,7 @@ initSomething() {
     GO_VERSION="go1.11"
     GLIDE_VERSION="v0.13.2"
 
-    CHAIN_DATA_DIST_NAME=Chain_634205
+    CHAIN_DATA_DIST_NAME=Chain_937651
 }
 
 delNKNMineUser() {
