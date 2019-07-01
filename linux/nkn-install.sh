@@ -9,7 +9,7 @@ getBeneficiaryAddr() {
         echo "       [1] means download the latest nkn chain data"
         exit 0
     fi
-    if [ ${#BENEFICIARY_ADDR} -ne 34 ]
+    if [ ${#BENEFICIARY_ADDR} -ne 36 ]
     then
         echo "Usage: ./nkn-install.sh YOUR_CORRECT_NKN_ADDRESS [1]"
         echo "       [1] means download the latest nkn chain data"
