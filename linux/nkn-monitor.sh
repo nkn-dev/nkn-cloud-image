@@ -14,7 +14,7 @@ ${RANDOM_PASSWD}
 ${RANDOM_PASSWD}
 EOF
     echo ${RANDOM_PASSWD} > ./wallet.pswd
-    chmod 0400 wallet.dat wallet.pswd
+    chmod 0400 wallet.json wallet.pswd
     return $?
 }
 
@@ -44,10 +44,8 @@ then
     LATEST_TAG=$(git tag | tail -1)
     git checkout ${LATEST_TAG}
     make
-
-    mkdir -p ./Log
     
-    [ -e "wallet.dat" ] || initWallet || ! echo "Init Wallet fail" || exit 1
+    [ -e "wallet.json" ] || initWallet || ! echo "Init Wallet fail" || exit 1
     
     startByNohup
 

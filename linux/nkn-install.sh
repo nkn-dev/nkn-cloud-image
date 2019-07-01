@@ -137,13 +137,16 @@ initNKNConf() {
 
     sudo cat <<EOF > /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.user.json
 {
+  "HttpWsPort": 30002,
+  "HttpJsonPort": 30003,
   "BeneficiaryAddr": "$BENEFICIARY_ADDR",
   "SyncBatchWindowSize": 128,
   "LogLevel": 2
 }
 EOF
 
-    sudo cp /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.testnet.json /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.json
+    # sudo cp /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.testnet.json /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.json
+    sudo cp /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.mainnet.json /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.json
 
     sudo jq -n \
             --argfile c1 /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/config.json \
