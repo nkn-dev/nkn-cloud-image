@@ -168,7 +168,7 @@ ${RANDOM_PASSWD}
 ${RANDOM_PASSWD}
 EOF
     sudo echo ${RANDOM_PASSWD} > ./wallet.pswd
-    sudo chmod 0400 wallet.dat wallet.pswd
+    sudo chmod 0400 wallet.json wallet.pswd
     sudo chown $NKN_MINE_USER_NAME:$NKN_MINE_USER_NAME wallet.dat
     sudo chown $NKN_MINE_USER_NAME:$NKN_MINE_USER_NAME wallet.pswd
 
