@@ -20,7 +20,7 @@ getBeneficiaryAddr() {
 initSomething() {
     CURRENT_DIR=$(pwd)
     NKN_MINE_USER_NAME="nkn-mine"
-    GO_VERSION="go1.11"
+    GO_VERSION="go1.12"
     GLIDE_VERSION="v0.13.2"
 
     CHAIN_DATA_DIST_NAME=Chain_937651
