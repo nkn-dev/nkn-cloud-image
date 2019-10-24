@@ -40,6 +40,8 @@ then
 
     cd $HOME/go/src/github.com/nknorg/nkn
 
+    git tag -d v1.1b-beta
+
     git fetch
     LATEST_TAG=$(git tag | tail -1)
     git checkout ${LATEST_TAG}
