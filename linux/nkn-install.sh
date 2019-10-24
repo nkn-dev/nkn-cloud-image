@@ -23,7 +23,7 @@ initSomething() {
     GO_VERSION="go1.12"
     GLIDE_VERSION="v0.13.2"
 
-    CHAIN_DATA_DIST_NAME=ChainDB_145096
+    CHAIN_DATA_DIST_NAME=ChainDB_pruned_382338
 }
 
 delNKNMineUser() {
@@ -177,7 +177,7 @@ EOF
 
 downNKNChainData() {
     cd /home/$NKN_MINE_USER_NAME/go/src/github.com/nknorg/nkn/
-    sudo -u $NKN_MINE_USER_NAME wget -N https://storage.googleapis.com/nkn-mainnet-snapshot/$CHAIN_DATA_DIST_NAME.zip
+    sudo -u $NKN_MINE_USER_NAME wget -N https://storage.googleapis.com/nsnapshot/$CHAIN_DATA_DIST_NAME.zip
     sleep 1
     sudo -u $NKN_MINE_USER_NAME unzip $CHAIN_DATA_DIST_NAME.zip 
     sleep 1
